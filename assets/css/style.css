@@ -5,6 +5,7 @@
   --dark-purple: #260f26ff;
   --jet: #2a2b2aff;
   --jet-lighter: rgb(66, 66, 66);
+  --jet-more-lighter: rgb(90, 90, 90);
   --semi-white: #E2DADB;
 }
 
@@ -14,6 +15,7 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
   font-family: 'Tilt-Neon';
+  transition: all .2s;
 }
 
 body {
@@ -23,12 +25,12 @@ body {
   align-items: center;
   gap: 4rem;
   color: var(--semi-white);
+  padding-top: 40px;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   gap: 4rem;
 }
 
@@ -88,12 +90,20 @@ button:hover {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   animation: fade-in-left;
   animation-duration: 2s;
+  background-color: var(--jet-lighter);
+  padding: 15px;
+  border-radius: 15px;
 }
 
 li button {
   border: none;
   background-color: var(--mint);
   color: var(--jet);
+}
+
+#to-do-list li:hover {
+  background-color: var(--jet-more-lighter);
 }

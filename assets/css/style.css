@@ -16,13 +16,15 @@
   scroll-behavior: smooth;
   font-family: 'Tilt-Neon';
   transition: all .2s;
+  scroll-behavior: smooth;
 }
 
 body {
-  background-color: var(--jet);
   background-image: url('../img/BG.svg');
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
+  background-color: var(--jet);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,8 +38,10 @@ h1 {
 }
 
 .container {
+  margin-bottom: 50px;
   padding: 50px;
-  width: 40%;
+  min-width: 480px;
+  width: 50%;
   display: flex;
   flex-direction: column;
   gap: 4rem;
@@ -54,7 +58,7 @@ h1 {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 }
 
 #imput-new-task,
@@ -67,13 +71,13 @@ h1 {
 
 #imput-new-task {
   /* height: 2rem; */
-  width: 20rem;
+  width: 80%;
   border-radius: 15px;
 }
 
 button {
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -86,6 +90,7 @@ button {
 }
 
 button:hover {
+  font-size: 3rem;
   background-color: var(--carolina-blue);
   color: var(--jet);
   transition: all .4s;
@@ -102,7 +107,7 @@ button:hover {
 
 #to-do-list li {
   list-style: none;
-  font-size: 1.4rem;
+  font-size: 1rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -122,4 +127,28 @@ li button {
 
 #to-do-list li:hover {
   background-color: var(--jet-more-lighter);
+}
+
+@media only screen and (max-width: 620px){
+
+  .container {
+    min-width: 10px;
+    width: 90%;
+  }
+
+  #imput-new-task {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 950px){
+
+  .container {
+    min-width: 10px;
+    width: 70%;
+  }
+
+  /* #imput-new-task {
+    font-size: 14px;
+  } */
 }
